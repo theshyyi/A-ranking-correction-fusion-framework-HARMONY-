@@ -1,0 +1,49 @@
+{
+  "ref": {
+    "path": "/home/ud202380664/PRE_MERGE/TIMEFIX/Finish/CMFDV2.TIMEFIX.daily.CHINA.nc",
+    "var": "pr"
+  },
+  "targets": [
+    {
+      "name": "FUSED_CNN",
+      "path": "/home/ud202380664/PRE-FUSION/China_Fused_Final_CNN.nc",
+      "var": "pr_fused"
+    },
+    {
+      "name": "MSWX_V100",
+      "path": "/home/ud202380664/PRE_MERGE/TIMEFIX/Finish/MSWX-V100.TIMEFIX.daily.CHINA.nc",
+      "var": "pr"
+    },
+    {
+      "name": "MSWEP_V315",
+      "path": "/home/ud202380664/PRE_MERGE/TIMEFIX/Finish/MSWEP-V315.TIMEFIX.daily.CHINA.nc",
+      "var": "pr"
+    },
+    {
+      "name": "CPC",
+      "path": "/home/ud202380664/PRE_MERGE/TIMEFIX/Finish/CPC.TIMEFIX.daily.CHINA.nc",
+      "var": "pr"
+    }
+  ],
+  "china_climate_shp": {
+    "path": "/home/ud202380664/CHINA/ObeservationData/Chinese_Climate/Chinese_climate.shp",
+    "field": "climate"
+  },
+  "dem": {
+    "path": "/home/ud202380664/CHINA/ObeservationData/etopo2_new.nc",
+    "var": "z",
+    "bands_m": [0, 200, 500, 1000, 1500, 2000, 3000, 4000, 9000],
+	"land_only": true
+  },
+  "run": {
+    "out_dir": "/home/ud202380664/PRE-FUSION/VALIDATE_RSE_RAW",
+    "regrid": "none",
+    "wet_thr": 0.1,
+    "heavy_thr": 10.0,
+    "chunks": {
+      "time": 3650,
+      "lat": 200,
+      "lon": 200
+    }
+  }
+}
