@@ -1,0 +1,32 @@
+{
+  "input_dir": "/home/ud202380664/PRE-FUSION/Correct",
+  "recursive": false,
+  "file_glob": "*.nc",
+
+  "out_root": "/home/ud202380664/PRE-FUSION/ET_OUT",
+
+  "product": "PRE-FUSION",
+  "scenario": "Correct",
+
+  "frequencies": ["year", "month"],
+  "overwrite": false,
+  "nproc": 6,
+
+  "variables": ["pr"],
+
+  "indices": {
+    "pr": ["rx1day", "rx5day", "sdii", "cdd", "cwd", "r10mm", "r20mm", "r95p", "r99p", "prcptot"]
+  },
+
+  "wet_day_thresh_mm": 1.0,
+
+  "percentile_base": null,
+  "percentile_mode": "global",
+
+  "varname_map": {
+    "pr": "pr"
+  },
+
+  "auto_detect_pr_var": true,
+  "pr_var_candidates": ["pr", "precip", "pre", "rain", "precipitation","prec_corrected_two_stage","pr_fused"]
+}
